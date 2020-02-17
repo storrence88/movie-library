@@ -23,6 +23,7 @@ const setTokenForOperation = async operation =>
       'X-CSRF-Token': token
     }
   });
+
 // link with token
 const createLinkWithToken = () =>
   new ApolloLink(
@@ -44,3 +45,21 @@ const createLinkWithToken = () =>
         };
       })
   );
+
+// log erors
+const logError = error => console.error(error);
+
+// create error link
+const createErrorLink = () =>
+  onError(({ graphQLErrors, networkError, operation }) => {
+    if (graphQLErrors) {
+      logError('GraphQL - Error', {
+        errors: graphQLErrors,
+        operationName: operation.operationName,
+        variables: operation.variables
+      });
+    }
+    if (networkError) {
+      logError('GraphQL - NetworkError', networkError);
+    }
+  });
