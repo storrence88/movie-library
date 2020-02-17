@@ -63,3 +63,10 @@ const createErrorLink = () =>
       logError('GraphQL - NetworkError', networkError);
     }
   });
+
+// http link
+const createHttpLink = () =>
+  new HttpLink({
+    uri: '/graphql',
+    credentials: 'include'
+  });
