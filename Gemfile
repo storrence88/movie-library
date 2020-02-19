@@ -10,6 +10,7 @@ gem 'webpacker', '~> 4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'graphql'
+gem 'ar_lazy_preload'
 
 group :development, :test do
   gem 'pry-rails'
