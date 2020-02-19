@@ -13,7 +13,7 @@ RSpec.describe Types::QueryType do
     end
 
     subject(:result) do
-      MartianLibrarySchema.execute(query).as_json
+      MovieLibrarySchema.execute(query).as_json
     end
 
     it "returns all items" do
