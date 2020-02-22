@@ -1,4 +1,4 @@
-import React, { useState } from 'React';
+import React, { useState } from 'react';
 import cs from './styles';
 
 const ProcessItemForm = ({
@@ -9,7 +9,7 @@ const ProcessItemForm = ({
   buttonText,
   loading
 }) => {
-  const [title, setTitle] = useState(initalTitle);
+  const [title, setTitle] = useState(initialTitle);
   const [description, setDescription] = useState(initialDescription);
   const [imageUrl, setImageUrl] = useState(initialImageUrl);
   return (
