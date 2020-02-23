@@ -5,7 +5,7 @@ const ProcessItemForm = ({
   initialTitle = '',
   initialDescription = '',
   initialImageUrl = '',
-  onProcessImage,
+  onProcessItem,
   buttonText,
   loading
 }) => {
